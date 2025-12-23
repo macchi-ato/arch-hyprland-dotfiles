@@ -12,13 +12,13 @@
 },
 {   
     "label": "suspend",
-    "action": "systemctl suspend",
+    "action": "",
     "keybind": "s",
     "text": "Suspend"
 },
 { 
     "label": "hibernate",
-    "action": "systemctl hibernate",
+    "action": "",
     "keybind": "h",
     "text": "Hibernate" 
 },

@@ -2,7 +2,6 @@
 @define-color primary #BFAA80;
 @define-color button-border #D08B57; 
 
-
 #lock {
     background-image: url("/home/macchi/.config/wlogout/icons/lock.png");
 }
@@ -23,8 +22,13 @@
 }
 
 * {
-    background-image: none;
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
     box-shadow: none;
+    text-shadow: none;
+    color: black;
 }
 
 window {
@@ -35,22 +39,13 @@ button {
     font-size: 20px;
     background-color: @background;
     border: 2px solid @button-border;
-    border-radius: 5px;
-    margin: 5px;
+    border-radius: 0;
+    margin: 4px;
     min-width: 80px;
     min-height: 40px;
 }
 
-button:hover,
-button:focus {
+button:hover {
     background-color: @primary;
     border-color: @primary;
-}
-
-
-/* Individual button styling */
-#lock, #logout, #suspend, #hibernate, #shutdown, #reboot {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100px;
 }
