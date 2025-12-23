@@ -1,0 +1,138 @@
+[{
+    "height": 40,
+    "spacing": 5, 
+
+    "modules-left": [
+        "group/workspaces",
+	    "mpris"
+    ],
+    "modules-center": [
+        "group/windows"
+    ],
+    "modules-right": [
+        "group/cpuram",
+        "group/system"
+    ],
+
+
+    "custom/openbracket": {
+        "format": "[",
+        "tooltip": false
+    },
+    "custom/closebracket": {
+        "format": "]",
+        "tooltip": false
+    },    
+    "custom/split": {
+      "format": "|",
+      "tooltip": false
+    },
+
+
+    "group/workspaces":{
+        "orientation": "horizontal",
+        "modules":[
+            "custom/openbracket",
+            "hyprland/workspaces",
+            "custom/closebracket"
+        ]
+    },
+    "hyprland/workspaces": {
+	    "disable-scroll": true,
+        "all-outputs": false,
+	    "persistent-workspaces": {
+	        "*": [1, 2, 3, 4, 5]
+	    },
+       	"format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "default": "•"
+        }
+	
+    },
+
+    "mpris": {
+        "format": "[   {status_icon} | {dynamic} ]",
+        "interval": 1,
+        "dynamic-len": 40,
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸",
+            "stopped": ""
+        },
+        "dynamic-order": ["artist"]
+    },
+
+
+    "group/windows": {
+        "orientation":"horizontal",
+        "modules":[
+            "custom/openbracket",
+            "hyprland/window",
+            "custom/closebracket"
+        ]
+    },
+    "hyprland/window": {
+        "format": "{title}", 
+        "max-length": 20,
+        "min-length": 0,
+        "all-outputs": true
+    },
+
+
+    "group/cpuram": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/openbracket",
+            "cpu",
+            "custom/split",
+            "memory",
+            "custom/closebracket"
+        ]
+    },
+    "cpu": {
+        "format": "CPU:{usage}%",
+        "tooltip": false,
+        "interval": 2
+    },
+    "memory":{
+        "format": "RAM:{}%",
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/openbracket",
+            "clock",
+            "custom/split",
+            "network",
+            "custom/swaync",
+            "custom/closebracket"
+        ]
+    },
+    "clock": {
+        "format": "{:%I:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "onclick" : "kalender"
+    },
+    "network": {
+        "interface": "wlp9s0",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀 LAN",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ipaddr}\n{ssid} ({signalStrength}%)",
+        "on-click": "kitty -e nmtui",
+        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
+    },
+    "custom/swaync": {
+      "format": "",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client --toggle-panel",
+      "interval": 0
+    },
+}]
