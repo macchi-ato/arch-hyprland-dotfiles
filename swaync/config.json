@@ -40,43 +40,13 @@
     },
     "widgets": [
         "buttons-grid",
-	    "mpris",
         "volume",
-        "dnd",
         "title",
         "notifications"
     ],
     "widget-config": {
-        "mpris": {
-            "image-size": 60,
-            "image-radius": 0
-        },
-        "volume": {
-            "label": "  󰕾 ",
-            "expand-button-label": " ",
-            "collapse-button-label": " ",
-            "show-per-app": true,
-            "show-per-app-icon": false,
-            "show-per-app-label": true 
-        },
-        "dnd": {
-            "text": "Do Not Disturb"
-        },
-        "title": {
-            "text": "Notifications Center",
-            "clear-all-button": true,
-            "button-text": " 󰆴 "
-        },
         "buttons-grid": {
             "actions": [
-                {
-                    "label": "󰄜",
-                    "type": "normal"
-                },
-                {
-                    "label": "󰌘",
-                    "type": "normal" 
-                },
                 {
                     "label": " ",
                     "type": "toggle",
@@ -92,6 +62,19 @@
                     "update-command": "sh -c '[[ $(pactl get-sink-mute @DEFAULT_SINK@) == *yes* ]] && echo true || echo false'"
                 }
             ]
+        },
+        "volume": {
+            "label": "󰕾 ",
+            "expand-button-label": " ",
+            "collapse-button-label": " ",
+            "show-per-app": true,
+            "show-per-app-icon": false,
+            "show-per-app-label": true 
+        },
+        "title": {
+            "text": "Notifications Center",
+            "clear-all-button": true,
+            "button-text": "󰆴"
         },
 	"notifications": {}
     }

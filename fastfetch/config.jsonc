@@ -15,7 +15,7 @@
     "break",
     {
       "type": "custom",
-      "format": "\u001b[33mM A C C H I\u001b[0m\n"
+      "format": "\u001b[31mM A C C H I\u001b[0m\n"
     },
     {
       "type": "os",
