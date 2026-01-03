@@ -7,14 +7,16 @@
 /* ========================================================================
    COLOR PALETTE
 ======================================================================== */
-@define-color bg-primary #2C2A24;        /* Dark background - main canvas */
-@define-color bg-secondary #3c3836;      /* Secondary background - panels */
+@define-color bg-primary #2C2A24;
+@define-color bg-secondary #3c3836;
 
-@define-color fg-primary #ebdbb2;         /* Primary text - cream/off-white */
+@define-color fg-primary #ebdbb2;
 
-@define-color accent-green #78997A;       /* Spotify green accent */
-@define-color accent-orange #D08B57;      /* Warm orange accent */
-@define-color accent-red #B05A5A;         /* Error/critical red */
+@define-color borders #E6474C;
+
+@define-color accent-green #78997A;
+@define-color accent-orange #D08B57;
+@define-color accent-red #B05A5A;
 
 
 /* ========================================================================
@@ -36,7 +38,7 @@
     background-color: @bg-primary;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
     padding: 10px;
-    border: 1px solid @accent-orange;
+    border: 2px solid @borders;
     border-radius: 4px;
 }
 

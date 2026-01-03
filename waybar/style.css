@@ -1,11 +1,7 @@
 @define-color background #2C2A24;
 @define-color text #DDD5C4;
-@define-color borders #A0907A;
-@define-color focused #D08B57;
-@define-color focused2 #BFAA80;
-@define-color color1 #7699A3;
-@define-color color2 #8D7AAE;
-@define-color color3 #78997A;
+@define-color borders #E6474C;
+@define-color highlight #78997A;
 @define-color urgent #B05A5A;
 
 * {
@@ -26,7 +22,7 @@ window#waybar {
   margin: 10px 0 0 12px;
   padding: 0;
   background: @background;
-  border: 2px solid @focused;
+  border: 2px solid @borders;
   border-radius: 4px;
 }
 
@@ -34,7 +30,7 @@ window#waybar {
   margin: 10px 0 0 0;
   padding: 0 10px;
   background: @background;
-  border: 2px solid @focused;
+  border: 2px solid @borders;
   border-radius: 4px;
 }
 
@@ -42,7 +38,7 @@ window#waybar {
   margin: 10px 12px 0 0;
   padding: 0 10px;
   background: @background;
-  border: 2px solid @focused;
+  border: 2px solid @borders;
   border-radius: 4px;
 }
 
@@ -57,7 +53,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: @color3;
+  background-color: @highlight;
   color: @background;
 }
 
@@ -85,5 +81,5 @@ window#waybar {
 #network:hover,
 #custom-swaync:hover,
 #custom-power:hover {
-  color: @color3;
+  color: @highlight;
 }
